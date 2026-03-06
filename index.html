@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Account - Voice Viva</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+    background-color:#f4f4f9;
+}
+
+.container{
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    width:400px;
+    text-align:center;
+}
+
+input, textarea{
+    width:90%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+button{
+    background-color:#ff4d4d;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background-color:#e43f3f;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Delete Your Voice Viva Account</h2>
+
+<p>
+If you wish to delete your Voice Viva account, please fill in the details below.  
+Once submitted, our team will review your request and permanently delete your account and associated data.
+</p>
+
+<form id="deleteForm" onsubmit="return handleDelete(event)">
+
+<input type="text" id="name" placeholder="Enter your full name" required>
+
+<input type="email" id="email" placeholder="Enter your registered email" required>
+
+<input type="password" id="password" placeholder="Enter your account password" required>
+
+<textarea id="reason" placeholder="Reason for deleting your account (optional)"></textarea>
+
+<button type="submit">Delete My Voice Viva Account</button>
+
+</form>
+
+</div>
+
+<script>
+
+function handleDelete(event){
+event.preventDefault();
+
+document.body.innerHTML = `
+<h1 style="text-align:center;margin-top:20%;font-family:Arial;">
+Voice Viva Account Deletion Request Received
+</h1>
+
+<p style="text-align:center;font-size:18px;">
+Your request has been successfully submitted.  
+Our support team will review and permanently delete your account within 48 hours.
+</p>
+`;
+}
+
+</script>
+
+</body>
+</html>
